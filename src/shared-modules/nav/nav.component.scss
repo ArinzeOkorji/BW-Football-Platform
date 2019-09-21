@@ -1,0 +1,46 @@
+@font-face {
+    font-family: Poppins;
+    src: url('/src/assets/fonts/Poppins-Regular.ttf') format('open-type');
+}
+
+$navLinkColor: #23262B;
+.container {
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+
+/* Navbar */
+
+.navbar {
+    height: 20vh;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Logo */
+    .logoContainer {
+        max-width: 100px;
+        img {
+            height: 100%;
+        }
+    }
+    /* Navbar links */
+    ul {
+        display: flex;
+        width: 55%;
+        justify-content: space-between;
+        li {
+            list-style: none;
+            a {
+                font-family: Poppins, sans-serif;
+                font-weight: 900;
+                color: $navLinkColor;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: 12px;
+                cursor: pointer;
+            }
+        }
+    }
+}
