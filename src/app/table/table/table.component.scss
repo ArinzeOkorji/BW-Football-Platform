@@ -1,0 +1,57 @@
+@font-face {
+    font-family: Poppins;
+    src: url('/src/assets/fonts/Poppins-Regular.ttf') format('open-type');
+}
+
+@font-face {
+    font-family: PoppinsLight;
+    src: url('/src/assets/fonts/Poppins-Light.ttf') format('open-type');
+}
+
+.container {
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+.leageNameHero {
+    background-image: url('/src/assets/images/image1.png');
+    background-position: center;
+    background-size: cover;
+    height: 15vh;
+    background-repeat: no-repeat;
+    .overlay {
+        background: linear-gradient(359.71deg, #FFFFFF -164.45%, rgba(255, 255, 255, 0) 17.36%), rgba(33, 35, 44, 0.9);
+        height: 100%;
+        .panel {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+            .leageName {
+                color: #fff;
+                font-family: Poppins, sans-serif;
+                font-size: 36px;
+            }
+            ul.breadCrumbs {
+                list-style: none;
+                display: flex;
+                li {
+                    color: #FDC624;
+                    padding: 5px;
+                    font-size: 10px;
+                    font-family: PoppinsLight, sans-serif;
+                }
+                li:last-child {
+                    color: #fff;
+                }
+                li::after {
+                    content: '>';
+                    padding-left: 10px;
+                }
+                li:last-child::after {
+                    content: none;
+                }
+            }
+        }
+    }
+}
