@@ -8,10 +8,15 @@
     src: url('/src/assets/fonts/Poppins-Light.ttf') format('open-type');
 }
 
+$tabBlue: #688090;
+$customYellow: #FDC624;
 .container {
     margin-left: 10vw;
     margin-right: 10vw;
 }
+
+
+/* League banner starts */
 
 .leageNameHero {
     background-image: url('/src/assets/images/image1.png');
@@ -31,12 +36,13 @@
                 color: #fff;
                 font-family: Poppins, sans-serif;
                 font-size: 36px;
+                text-transform: uppercase;
             }
             ul.breadCrumbs {
                 list-style: none;
                 display: flex;
                 li {
-                    color: #FDC624;
+                    color: $customYellow;
                     padding: 5px;
                     font-size: 10px;
                     font-family: PoppinsLight, sans-serif;
@@ -54,4 +60,53 @@
             }
         }
     }
+}
+
+
+/* League banner ends */
+
+
+/* Body */
+
+.body {
+    margin-top: 23px;
+    height: 60vh;
+}
+
+
+/* Tabs Group starts */
+
+ul.tabGroup {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    /* Tab item starts */
+    li.tabItem {
+        a {
+            padding: 5px 30px;
+            border-right: 1px solid $tabBlue;
+            border-bottom: 1px solid transparent;
+            color: $tabBlue;
+            font-family: Poppins, sans-serif;
+            text-transform: uppercase;
+            font-size: 14px;
+            cursor: pointer;
+        }
+    }
+    li.tabItem:last-child {
+        a:last-child {
+            border-right: none;
+        }
+    }
+    li.tabItem.active {
+        a {
+            color: #fff;
+            border-bottom: 1px solid $customYellow;
+            font-weight: 900;
+            background: $tabBlue;
+        }
+    }
+    /* Tab item ends */
 }

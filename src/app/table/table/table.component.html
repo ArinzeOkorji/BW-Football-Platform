@@ -1,6 +1,7 @@
 <app-league-tabs></app-league-tabs>
 
 <div>
+    <!-- League banner starts -->
     <div class="leageNameHero">
         <div class="overlay">
             <div class='container panel'>
@@ -22,4 +23,23 @@
             </div>
         </div>
     </div>
+    <!-- League banner ends -->
+
+    <!-- Table section starts -->
+    <div class="body">
+        <div class='container'>
+            <!-- Tabs starts -->
+            <ul class="tabGroup">
+                <li class="tabItem active"><a>Table</a></li>
+                <li class="tabItem"><a>Fixtures</a></li>
+                <li class="tabItem"><a>Teams</a></li>
+            </ul>
+            <!-- Tabs ends -->
+
+            <!-- Router Outlet starts -->
+            <router-outlet></router-outlet>
+            <!-- Router Outlet ends -->
+        </div>
+    </div>
+    <!-- Table section ends -->
 </div>
