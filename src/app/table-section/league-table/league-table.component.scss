@@ -1,0 +1,87 @@
+@font-face {
+    font-family: Poppins;
+    src: url("/src/assets/fonts/Poppins-Regular.ttf") format("open-type");
+}
+
+@font-face {
+    font-family: PoppinsLight;
+    src: url("/src/assets/fonts/Poppins-Light.ttf") format("open-type");
+}
+
+$tabBlue: #688090;
+$customYellow: #fdc624;
+.container {
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+
+/* Table starts */
+
+.tableContainer {
+    width: 90%;
+}
+
+table {
+    width: 100%;
+    td {
+        font-family: Poppins, sans-serif;
+        color: #3b3b45;
+        font-size: 18px;
+        font-weight: 700;
+        .teamLogoContainer {
+            max-width: 50px;
+            .teamLogo {
+                height: 100%;
+            }
+        }
+    }
+    /* Left-align td */
+    td.right-align {
+        text-align: right;
+    }
+}
+
+
+/* Table ends */
+
+
+/* Buttons starts */
+
+.btnContainer {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 40px;
+}
+
+
+/* Button group */
+
+.btn-group {
+    display: flex;
+    width: max-content;
+}
+
+
+/* Single button */
+
+.btn {
+    width: 94px;
+    height: 42px;
+    border: 1px solid #eee;
+    background: #eee;
+    font-family: Poppins, sans-serif;
+    font-weight: 700;
+    color: rgba(1, 1, 1, 0.8);
+    border-radius: 2px;
+}
+
+
+/* Yellow button */
+
+.btn-yellow {
+    background: $customYellow;
+}
+
+
+/* Buttons ends */
