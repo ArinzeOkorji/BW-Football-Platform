@@ -4,8 +4,17 @@
 }
 
 @font-face {
+    font-family: Roboto;
+    src: url('/src/assets/fonts/Roboto/Roboto-Regular.ttf') format('open-type');
+}
+
+@font-face {
     font-family: PoppinsLight;
     src: url('/src/assets/fonts/Poppins-Light.ttf') format('open-type');
+}
+
+* {
+    outline: none;
 }
 
 $tabBlue: #688090;
@@ -89,7 +98,7 @@ ul.tabGroup {
             border-right: 1px solid $tabBlue;
             border-bottom: 1px solid transparent;
             color: $tabBlue;
-            font-family: Poppins, sans-serif;
+            font-family: Roboto, sans-serif;
             text-transform: uppercase;
             font-size: 14px;
             cursor: pointer;

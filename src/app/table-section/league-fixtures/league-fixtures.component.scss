@@ -8,59 +8,62 @@
     src: url("/src/assets/fonts/Poppins-Light.ttf") format("open-type");
 }
 
-$tabBlue: #688090;
 $customYellow: #fdc624;
-.container {
-    margin-left: 10vw;
-    margin-right: 10vw;
-}
 
+/* main starts */
 
-/* Table starts */
-
-.tableContainer {
-    width: 90%;
+.main {
+    height: 70vh;
     margin-top: 30px;
 }
 
-table {
-    width: 100%;
-    tr {
-        height: 30px;
+
+/* main ends */
+
+.singleGameDay {
+    display: grid;
+    width: 70vw;
+    height: 70px;
+    grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border-bottom: 1px solid #ccc;
+    /* Left column */
+    .leftColumn {
+        display: grid;
     }
-    th:first-child {
-        text-align: left;
+    /* right column */
+    .rightColumn {
+        align-self: center
     }
-    th {
-        font-family: PoppinsLight, sans-serif;
-        font-weight: 100;
-        font-size: 18px;
-        color: rgb(161, 161, 161);
-    }
-    td {
-        font-family: Poppins, sans-serif;
-        color: #3b3b45;
-        font-size: 18px;
-        font-weight: 700;
-        .teamLogoContainer {
-            max-width: 26px;
-            .teamLogo {
-                max-width: 100%;
-            }
+    /* Team names  */
+    .awayTeam,
+    .homeTeam {
+        .teamName {
+            font-family: Poppins, sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: #3b3b45;
         }
     }
-    td:first-child {
-        width: 40px;
+    .awayTeam {
+        align-items: end;
     }
-    /* Left-align td */
-    td.right-align,
-    th.right-align {
-        text-align: right;
+    .gameDate,
+    .gameTime {
+        font-family: PoppinsLight, sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        color: #3b3b45;
     }
 }
 
-
-/* Table ends */
+.teamLogoContainer {
+    max-width: 26px;
+    .teamLogo {
+        max-width: 100%;
+    }
+}
 
 
 /* Buttons starts */

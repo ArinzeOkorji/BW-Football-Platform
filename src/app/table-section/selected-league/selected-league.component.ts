@@ -12,7 +12,9 @@ export class SelectedLeagueComponent implements OnInit {
   constructor(private activatedRoute: ActivatedRoute, private http: LeagueTablesHttpService) { }
 
   ngOnInit() {
-    this.http.leagueId = this.activatedRoute.snapshot.paramMap.get('selected-league');
+    this.activatedRoute.params.subscribe(param => {
+      this.http.leagueId = param['selected-league'];
+    });
   }
 
 }

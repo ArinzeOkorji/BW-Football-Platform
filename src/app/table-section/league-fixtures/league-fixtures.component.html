@@ -1,0 +1,107 @@
+<div class='main'>
+    <!-- Single game day starts -->
+    <div class='singleGameDay' *ngFor='let game of fixtures | paginate: {itemsPerPage: count, currentPage: pageNumber}'>
+        <!-- Left column -->
+        <div class="leftColumn">
+            <!-- Home team starts -->
+            <div class='homeTeam'>
+
+                <!-- Team name -->
+                <div class="teamName">
+                    {{game.homeTeam.name}}
+                </div>
+
+            </div>
+            <!-- Home team ends -->
+
+            <!-- Away team starts -->
+            <div class='awayTeam'>
+
+                <!-- Team name -->
+                <div class="teamName">
+                    {{game.awayTeam.name}}
+                </div>
+
+            </div>
+            <!-- Away team ends -->
+        </div>
+        <!-- Left column ends -->
+
+        <!-- Right column start -->
+        <div class="rightColumn">
+            <!-- Game date -->
+            <div class="gameDate">
+                Sat, 28 Sept
+            </div>
+            <!-- Game time -->
+            <div class="gameTime">
+                3:00pm
+            </div>
+        </div>
+        <!-- Right column ends -->
+    </div>
+    <!-- Single game day ends -->
+
+
+    <!-- Single game day starts -->
+    <div class='singleGameDay'>
+        <!-- Left column -->
+        <div class="leftColumn">
+            <!-- Home team starts -->
+            <div class='homeTeam'>
+                <!-- Team crest -->
+                <div class="teamLogoContainer">
+                    <img src="/src/assets/images/image1.png" alt="Home team crest" class='teamLogo'>
+                </div>
+
+                <!-- Team name -->
+                <div class="teamName">
+                    Watford
+                </div>
+
+            </div>
+            <!-- Home team ends -->
+
+            <!-- Away team starts -->
+            <div class='awayTeam'>
+                <!-- Team crest -->
+                <div class="teamLogoContainer">
+                    <img src="/src/assets/images/image1.png" alt="Away team crest" class='teamLogo'>
+                </div>
+
+                <!-- Team name -->
+                <div class="teamName">
+                    Watford
+                </div>
+
+            </div>
+            <!-- Away team ends -->
+        </div>
+        <!-- Left column ends -->
+
+        <!-- Right column start -->
+        <div class="rightColumn">
+            <!-- Game date -->
+            <div class="gameDate">
+                Sat, 28 Sept
+            </div>
+            <!-- Game time -->
+            <div class="gameTime">
+                3:00pm
+            </div>
+        </div>
+        <!-- Right column ends -->
+    </div>
+    <!-- Single game day ends -->
+
+    <!-- Pagination section starts -->
+    <div class="btnContainer">
+        <!-- Button group starts -->
+        <div class="btn-group">
+            <pagination-controls (pageChange)="pageNumber = $event"></pagination-controls>
+
+        </div>
+        <!-- Button group ends -->
+    </div>
+    <!-- Pagination section ends -->
+</div>

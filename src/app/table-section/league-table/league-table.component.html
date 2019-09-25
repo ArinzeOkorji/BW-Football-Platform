@@ -2,7 +2,37 @@
 
     <!-- Table starts -->
     <table>
+        <thead>
+            <tr>
+                <th>Clubs</th>
+                <th></th>
+                <th></th>
+                <th class="right-align">MP</th>
+                <th class="right-align">W</th>
+                <th class="right-align">D</th>
+                <th class="right-align">L</th>
+            </tr>
+        </thead>
         <tbody>
+            <tr *ngFor='let team of table | paginate: { itemsPerPage: count, currentPage: pageNumber}'>
+                <!-- Team position on table -->
+                <td>{{team.position}}</td>
+
+
+                <!-- Team crest image -->
+                <td>
+                    <div class="teamLogoContainer">
+                        <img src="{{team.team.crestUrl}}" class="teamLogo" alt="Team's Logo" />
+                    </div>
+                </td>
+
+                <!-- Team name -->
+                <td>{{team.team.name}}</td>
+                <td class="right-align">{{team.playedGames}}</td>
+                <td class="right-align">{{team.won}}</td>
+                <td class="right-align">{{team.draw}}</td>
+                <td class="right-align">{{team.lost}}</td>
+            </tr>
             <tr>
                 <td>1</td>
                 <td>
@@ -24,10 +54,12 @@
     <div class="btnContainer">
         <!-- Button group starts -->
         <div class="btn-group">
-            <button class="btn btn-yellow">Prev</button>
-            <button class="btn btn-yellow">Next</button>
+            <pagination-controls (pageChange)="pageNumber = $event"></pagination-controls>
+
         </div>
         <!-- Button group ends -->
     </div>
     <!-- Pagination section ends -->
+
+
 </div>
