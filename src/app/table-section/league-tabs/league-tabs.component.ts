@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LeagueTablesHttpService } from '../league-tables-http.service';
 
 
 @Component({
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LeagueTabsComponent implements OnInit {
 
-  constructor() { }
+  constructor(public http: LeagueTablesHttpService) { }
 
   ngOnInit() {
   }

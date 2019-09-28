@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { SharedModule } from 'src/shared-modules/shared.module';
 import { appRouter } from './app.router';
 import { NavComponent } from './nav/nav.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavComponent
+    NavComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

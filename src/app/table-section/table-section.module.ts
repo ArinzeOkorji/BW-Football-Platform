@@ -1,7 +1,7 @@
 
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { LeagueTabsComponent } from './league-tabs/league-tabs.component';
 import { RouterModule } from '@angular/router';
@@ -12,6 +12,7 @@ import { LeagueTablesHttpService } from './league-tables-http.service';
 import { SelectedLeagueComponent } from './selected-league/selected-league.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { LeagueFixturesComponent } from './league-fixtures/league-fixtures.component';
+import { AddHeaderInterceptorService } from './add-header-interceptor.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,12 @@ import { LeagueFixturesComponent } from './league-fixtures/league-fixtures.compo
     LeagueFixturesComponent
   ],
   providers: [
-    LeagueTablesHttpService
+    LeagueTablesHttpService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AddHeaderInterceptorService,
+      multi: true
+    }
   ],
   imports: [
     CommonModule,

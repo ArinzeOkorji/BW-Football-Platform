@@ -1,13 +1,16 @@
 <div>
     <div class="container">
         <div class="inner">
+
+            <!-- List of tabs items -->
             <ul>
-                <li><a routerLink='2055'>FA Cup</a></li>
-                <li><a routerLink='2002'>Bundesliga</a></li>
-                <li><a routerLink='2019'>Serie A</a></li>
-                <li><a routerLink='2021'>Premier League</a></li>
+                <li routerLinkActive='active' routerLink='2055'>FA Cup</li>
+                <li routerLinkActive='active' routerLink='2002'>Bundesliga</li>
+                <li routerLinkActive='active' routerLink='2019'>Serie A</li>
+                <li routerLinkActive='active' routerLink='2021'>Premier League</li>
             </ul>
 
+            <!-- Search form -->
             <form>
                 <input type="text" ngModel>
                 <i class="fas fa-user"></i>

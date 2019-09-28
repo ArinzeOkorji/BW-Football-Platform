@@ -9,6 +9,7 @@ $borderColor: #e5e5e5;
 }
 
 $navLinkColor: #23262b;
+$customYellow: #fdc624;
 .container {
     margin-left: 10vw;
     margin-right: 10vw;
@@ -30,17 +31,20 @@ ul {
     padding: 0;
     li {
         list-style: none;
-        padding: 10px 20px;
         border-right: 1px solid $borderColor;
-        a {
-            font-family: Poppins, sans-serif;
-            font-weight: 900;
-            color: $navLinkColor;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 12px;
-            cursor: pointer;
-        }
+        padding: 10px 20px;
+        font-family: Poppins, sans-serif;
+        font-weight: 900;
+        color: $navLinkColor;
+        outline: none;
+        text-transform: uppercase;
+        font-size: 12px;
+        cursor: pointer;
+        transition: .3s;
+    }
+    li.active {
+        background-color: $customYellow;
+        color: $navLinkColor;
     }
     li:last-child {
         border-right: none;
