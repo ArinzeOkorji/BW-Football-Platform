@@ -3,6 +3,12 @@
     src: url("/src/assets/fonts/Poppins-Regular.ttf") format("open-type");
 }
 
+@mixin for-lg {
+    @media screen and (min-width: 992px) {
+        @content;
+    }
+}
+
 $navLinkColor: #23262b;
 $listBorder: #3B3B45;
 
@@ -18,8 +24,12 @@ $listBorder: #3B3B45;
 /* All styles ends */
 
 .container {
-    margin-left: 10vw;
-    margin-right: 10vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    @include for-lg {
+        margin-left: 10vw;
+        margin-right: 10vw;
+    }
 }
 
 
@@ -58,6 +68,7 @@ $listBorder: #3B3B45;
                 padding: 4px 10px;
                 color: #fff;
                 font-size: 10px;
+                white-space: nowrap;
                 font-family: Poppins, sans-serif;
                 border-left: 1px solid $listBorder;
                 a {
@@ -75,26 +86,59 @@ $listBorder: #3B3B45;
 /* Navbar section */
 
 .navbar {
-    height: 20vh;
+    height: 10vh;
     background-color: #fff;
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: space-between;
+    padding-top: 25px;
+    @include for-lg {
+        align-items: center;
+        padding-top: unset;
+    }
     /* Logo */
     .logoContainer {
         max-width: 100px;
         img {
-            height: 100%;
+            height: 40px;
+            @include for-lg {
+                height: 100%;
+            }
         }
     }
     /* Navbar links */
+    .hamburgerBarContainer {
+        margin-top: 10px;
+        @include for-lg {
+            display: none;
+        }
+    }
+    .hamburgerBar {
+        height: 6px;
+        display: block;
+        margin-bottom: 2px;
+        width: 35px;
+        margin-left: auto;
+        background-color: #688090;
+    }
     ul {
-        display: flex;
-        justify-content: space-between;
         margin: 0;
         padding: 0;
+        display: none;
+        margin-top: 30px;
+        text-align: right;
+        @include for-lg {
+            display: flex;
+            margin-top: 0;
+            text-align: unset;
+            justify-content: space-between;
+        }
         li {
             list-style: none;
+            padding: 15px 0;
+            @include for-lg {
+                padding: 0;
+            }
             a {
                 font-family: Poppins, sans-serif;
                 font-weight: 900;
@@ -102,9 +146,11 @@ $listBorder: #3B3B45;
                 text-decoration: none;
                 text-transform: uppercase;
                 font-size: 12px;
-                padding: 10px 15px;
                 cursor: pointer;
                 border-bottom: 2px solid transparent;
+                @include for-lg {
+                    padding: 10px 15px;
+                }
             }
         }
         li:last-child {
@@ -116,4 +162,11 @@ $listBorder: #3B3B45;
             }
         }
     }
+    ul.active {
+        display: block;
+    }
+}
+
+.navbar.active {
+    height: 70vh;
 }

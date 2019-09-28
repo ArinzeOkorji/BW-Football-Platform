@@ -8,25 +8,41 @@
     src: url("/src/assets/fonts/Poppins-Light.ttf") format("open-type");
 }
 
+@mixin for-lg {
+    @media screen and (min-width: 992px) {
+        @content;
+    }
+}
+
 $tabBlue: #688090;
 $customYellow: #fdc624;
 .container {
-    margin-left: 10vw;
-    margin-right: 10vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    @include for-lg {
+        margin-left: 10vw;
+        margin-right: 10vw;
+    }
 }
 
 
 /* Table starts */
 
 .tableContainer {
-    width: 90%;
+    width: 100%;
     margin-top: 30px;
+    @include for-lg {
+        width: 90%;
+    }
 }
 
 table {
     width: 100%;
     tr {
-        height: 30px;
+        height: 53px;
+        @include for-lg {
+            height: 30px;
+        }
     }
     th:first-child {
         text-align: left;
@@ -34,23 +50,33 @@ table {
     th {
         font-family: PoppinsLight, sans-serif;
         font-weight: 100;
-        font-size: 18px;
+        font-size: 11px;
         color: rgb(161, 161, 161);
+        @include for-lg {
+            font-size: 18px;
+        }
     }
     td {
         font-family: Poppins, sans-serif;
         color: #3b3b45;
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 700;
+        @include for-lg {
+            font-size: 18px;
+        }
         .teamLogoContainer {
-            max-width: 26px;
+            height: 30px;
+            width: 30px;
             .teamLogo {
-                max-width: 100%;
+                width: 100%;
+                height: 100%;
             }
         }
     }
     td:first-child {
-        width: 40px;
+        @include for-lg {
+            width: 40px;
+        }
     }
     /* Left-align td */
     td.right-align,

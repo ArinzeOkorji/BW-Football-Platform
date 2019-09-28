@@ -24,7 +24,7 @@ export class SelectedLeagueComponent implements OnInit {
       this.router.navigate([`/table/${this.http.leagueId}/table`]);
     });
 
-    
+
   }
 
 }

@@ -3,10 +3,18 @@
     src: url("/src/assets/fonts/Poppins-Regular.ttf") format("open-type");
 }
 
+@mixin for-lg {
+    @media screen and (min-width: 992px) {
+        @content;
+    }
+}
+
 $customYellow: #fdc624;
 .main {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    @include for-lg {
+        grid-template-columns: 2fr 1fr;
+    }
 }
 
 .container {
@@ -42,6 +50,10 @@ ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    margin-bottom: 20px;
+    @include for-lg {
+        margin: 0;
+    }
     li.heading {
         color: #fff;
         font-family: Poppins, sans-serif;

@@ -17,21 +17,31 @@
 
 <!-- Navigation section -->
 <div class="container">
-    <div class="navbar">
+    <div class="navbar" [ngClass]='{active: menu}'>
         <div class="logoContainer">
             <img src="/src/assets/images/logo/logo.png" alt="BW-FOOTBALL logo">
         </div>
 
         <!-- Nav links -->
-        <ul>
-            <li><a>Home</a></li>
-            <li><a>News</a></li>
-            <li><a>Results</a></li>
-            <li routerLink='table' routerLinkActive='active'><a>Tables</a></li>
-            <li><a>Tips</a></li>
-            <li><a>Features</a></li>
-            <li><a>About</a></li>
-        </ul>
+        <div>
+            <!-- hamburger icon -->
+            <div (click)='toggleMenu()' class='hamburgerBarContainer'>
+                <span class='hamburgerBar'></span>
+                <span class='hamburgerBar'></span>
+                <span class='hamburgerBar'></span>
+            </div>
+            <!-- hamburger icon -->
+            <ul [ngClass]='{active: menu}'>
+                <li><a>Home</a></li>
+                <li><a>News</a></li>
+                <li><a>Results</a></li>
+                <li routerLink='table' routerLinkActive='active'><a>Tables</a></li>
+                <li><a>Tips</a></li>
+                <li><a>Features</a></li>
+                <li><a>About</a></li>
+            </ul>
+        </div>
+
 
     </div>
 </div>
