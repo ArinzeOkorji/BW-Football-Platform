@@ -1,5 +1,18 @@
 # BWFOOTBALLCLUB
 
+This is a web application built with Angular. The platform enables football fans view league information (such as league standings and fixtures).
+
+Why Angular? Well, Angular is the framework I have been growing my skills with. It was an opportunity to showcase what I'd learned so for on a project like this.
+
+## Duration
+It took me 8 days to build this product
+
+## Challenges faced
+Dealing with font icons was a hassle for me because I did not want use a cdn
+
+## What I loved
+The fact  I was able to produce a product to this level is still exciting for me. Also, learning how to manipulate ngx-pagination, and using an interceptor service to use a single header to my http calls was like icing on the cake.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.9.
 
 ## Development server
