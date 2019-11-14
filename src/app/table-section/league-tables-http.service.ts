@@ -18,7 +18,7 @@ leagueName: string;
     .subscribe(
       (res) => {
         /* Set League name to the returned json */
-        this.leagueName = res.name;
+        this.leagueName = res['name'];
       },
       (err) => {
         console.log(err);
