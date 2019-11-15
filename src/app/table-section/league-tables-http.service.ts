@@ -14,7 +14,7 @@ leagueName: string;
   }
 
   requestLeagueName() {
-     this.http.get(`http://api.football-data.org/v2/competitions/${this.leagueId}`)
+     this.http.get(`https://api.football-data.org/v2/competitions/${this.leagueId}`)
     .subscribe(
       (res) => {
         /* Set League name to the returned json */
@@ -27,12 +27,12 @@ leagueName: string;
   }
 
  requestleagueTable(): Observable<any> {
-    return this.http.get(`http://api.football-data.org/v2/competitions/${this.leagueId}/standings?standingType=TOTAL`);
+    return this.http.get(`https://api.football-data.org/v2/competitions/${this.leagueId}/standings?standingType=TOTAL`);
 
  }
 
  requestleagueFixtures(): Observable<any> {
-    return this.http.get(`http://api.football-data.org/v2/competitions/${this.leagueId}/matches?status=SCHEDULED`);
+    return this.http.get(`https://api.football-data.org/v2/competitions/${this.leagueId}/matches?status=SCHEDULED`);
 
  }
 }
