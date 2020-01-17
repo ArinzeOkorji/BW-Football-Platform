@@ -1,6 +1,6 @@
 # BWFOOTBALLCLUB
 
-This is a web application built with Angular. The platform enables football fans view league information (such as league standings and fixtures).
+This is a web application built with Angular. The platform enables football fans view league information (such as league standings and fixtures). View the live site here - https://bw-football-platform.netlify.com/
 
 Why Angular? Well, Angular is the framework I have been growing my skills with. It was an opportunity to showcase what I'd learned so for on a project like this.
 
